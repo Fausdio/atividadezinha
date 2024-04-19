@@ -5,7 +5,7 @@ PROC main()
     HB_CdpSelect("UTF8")
 
     oNome := amigao():nome("Diogo","Faustino")
-    ? "Olá! O nome informado foi" , oNome:cNome
+    ? "Olá! O nome informado foi" , oNome:cNome, oNome:cSobrenome
     
     oNasc := amigao():nasc("18/12/2000")
     ? "Nascimento: ", oNasc:nNasc
