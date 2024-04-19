@@ -5,14 +5,14 @@ CLASS amigao
     DATA cNome
     DATA cSobrenome
 
-    METHOD New(cNome, cSobrenome) 
+    METHOD nome(cNome, cSobrenome) 
 
 ENDCLASS 
 
 
-METHOD New( cNome, cSobrenome ) 
+METHOD nome( cNome, cSobrenome ) 
 
     ::cNome := cNome
-    :: cSobrenome := cSobrenome
+    ::cSobrenome := cSobrenome
     
 RETURN Self
