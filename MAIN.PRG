@@ -4,22 +4,27 @@ PROC main()
 
     HB_CdpSelect("UTF8")
 
-    oNome := amigao():nome("Diogo","Faustino")
-    ? "Olá! O nome informado foi" , oNome:cNome, oNome:cSobrenome
+    oNome := amigao():nome()
+    ACCEPT "Digite o primeiro nome: " TO oNome:cNome
+    ACCEPT "Digite o sobrenome: " TO oNome:cSobrenome
     
-    oNasc := amigao():nasc("18/12/2000")
-    ? "Nascimento: ", oNasc:nNasc
+    oNasc := amigao():nasc()
+    ACCEPT "Digite a sua data de nascimento: " TO oNasc:nNasc
 
-    oIdade := amigao():idade("23")
-    ? "Com idade de :", oIdade:nIdade
+    oIdade := amigao():idade()
+    ACCEPT "Com idade de: " TO oIdade:nIdade  
 
-    oAltura := amigao():altura("1,85")
-    ? "Altura", oAltura:nAltura
+    oAltura := amigao():altura()
+    ACCEPT "Altura: " TO oAltura:nAltura
 
-    oPeso := amigao():peso("87 KG")
-    ? "Peso", oPeso:cPeso
+    oPeso := amigao():peso()
+    ACCEPT "Peso: " TO oPeso:nPeso
 
-    oSigno := amigao():signo("Sagitário")
-    ? "Signo", oSigno:cSigno
+    oSigno := amigao():signo()
+    ACCEPT "Signo: " TO oSigno:cSigno
+
+    cls 
+
+    oPrint := amigao():Print()
 
 return

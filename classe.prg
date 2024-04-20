@@ -8,7 +8,7 @@ CLASS amigao
     DATA cSigno
     DATA nIdade
     DATA nAltura
-    DATA cPeso
+    DATA nPeso
 
     METHOD nome(cNome, cSobrenome) CONSTRUCTOR
     METHOD nasc(nNasc) CONSTRUCTOR
@@ -16,9 +16,10 @@ CLASS amigao
     METHOD idade(nIdade) CONSTRUCTOR
     METHOD altura(nAltura) CONSTRUCTOR
     METHOD peso(cPeso) CONSTRUCTOR
+    METHOD print() CONSTRUCTOR
+
 
 ENDCLASS 
-
 
 METHOD nome( cNome, cSobrenome ) 
 
@@ -29,7 +30,6 @@ RETURN Self
 
 METHOD nasc(nNasc)
     ::nNasc := nNasc
-    CTOD(nNasc)
 
 RETURN Self
 
@@ -43,8 +43,8 @@ METHOD altura(nAltura)
 
 RETURN Self
 
-METHOD peso(cPeso)
-    ::cPeso := cPeso
+METHOD peso(nPeso)
+    ::nPeso := nPeso
 
 RETURN Self
 
@@ -52,3 +52,14 @@ METHOD signo(cSigno)
     ::cSigno := cSigno
 
 RETURN Self
+
+METHOD print()
+
+    ? Alltrim(oNome:cNome, oNome:cSobrenome)
+    ? Alltrim(oNasc:nNasc)
+    ? Alltrim(oIdade:nIdade)
+    ? Alltrim(oAltura:nAltura)
+    ? Alltrim(oPeso:nPeso)
+    ? Alltrim(oSigno:cSigno)
+
+    Inkey(0)
