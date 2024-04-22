@@ -12,10 +12,10 @@ PROC main()
     ACCEPT "Digite o sobrenome: " TO oNome:cSobrenome
     
     oNasc := amigao():nasc()
-    ACCEPT "Digite a sua data de nascimento: " TO nascimento
+    ACCEPT "Digite a sua data de nascimento: " TO oNasc:nNasc
 
     //oIdade := amigao():idade()
-    ? "Com idade de: " , (date() - stod( nascimento )) / 365
+    ? "Com idade de: " , (date() - stod(oNasc:nNasc)) / 365
 
     oAltura := amigao():altura()
     ACCEPT "Altura: " TO oAltura:nAltura
