@@ -12,6 +12,7 @@ PROC main()
     
     ACCEPT "Digite o primeiro nome: " TO oNome:cNome
     ACCEPT "Digite o sobrenome: " TO oNome:cSobrenome 
+    ?
     
     oNasc := amigao()
     nascimento := date()
@@ -31,5 +32,7 @@ PROC main()
     cls
 
     oPrint := amigao():Print()
+    inkey(0)
+
 
 return

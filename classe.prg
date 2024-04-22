@@ -13,7 +13,6 @@ CLASS amigao
     METHOD nome(cNome, cSobrenome) CONSTRUCTOR
     METHOD nasc(nNasc) CONSTRUCTOR
     METHOD signo(cSigno) CONSTRUCTOR
-    METHOD idade(nIdade) CONSTRUCTOR
     METHOD altura(nAltura) CONSTRUCTOR
     METHOD peso(cPeso) CONSTRUCTOR
     METHOD print() CONSTRUCTOR
@@ -32,9 +31,6 @@ METHOD nasc(nNasc)
     ::nNasc := nNasc
 
 RETURN Self
-
-METHOD idade(nIdade)
-    ::nIdade := INT((date() - ::nNasc) / 365)
 
 RETURN ::nIdade
 
@@ -55,11 +51,9 @@ RETURN Self
 
 METHOD print()
 
-    ? ::cNome, oNome:cSobrenome
-    ? ::nNasc
-    ? ::nIdade
-    ? ::nAltura
-    ? ::nPeso
-    ? ::cSigno
-
-    Inkey(0)
+    ? "O nome informado foi: " , oNome:cNome, oNome:cSobrenome
+    ? "Data de nascimento: " , oNasc:nNasc
+    ? "Com idade de: " , int((date() - oNasc:nNasc) / 365), "anos"
+    ? "Altura informada: " , oAltura:nAltura
+    ? "Peso: " , oPeso:nPeso
+    ? "Signo: " , oSigno:cSigno
