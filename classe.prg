@@ -34,9 +34,9 @@ METHOD nasc(nNasc)
 RETURN Self
 
 METHOD idade(nIdade)
-    ::nIdade := nIdade
+    ::nIdade := INT((date() - ::nNasc) / 365)
 
-RETURN Self
+RETURN ::nIdade
 
 METHOD altura(nAltura)
     ::nAltura := nAltura
@@ -55,11 +55,11 @@ RETURN Self
 
 METHOD print()
 
-    ? Alltrim(oNome:cNome, oNome:cSobrenome)
-    ? Alltrim(oNasc:nNasc)
-    ? Alltrim(oIdade:nIdade)
-    ? Alltrim(oAltura:nAltura)
-    ? Alltrim(oPeso:nPeso)
-    ? Alltrim(oSigno:cSigno)
+    ? ::cNome, oNome:cSobrenome
+    ? ::nNasc
+    ? ::nIdade
+    ? ::nAltura
+    ? ::nPeso
+    ? ::cSigno
 
     Inkey(0)
